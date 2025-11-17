@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
- 
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
 </head>
 <body>
  <h1>Meine Überschrift</h1>
  <p>Das ist ein Paragraph und hier ein <a href="https://uni-tuebingen.de/" Link> Link </a></p>
- <picture>
-	<picture>
-  <source
-    srcset="/shared-assets/images/examples/surfer.jpg"
-    media="(orientation: portrait)" />
-  <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
-</picture>
+ <div id="Karte" style="width: 600px; height: 400px; position: relative;"></div>
+ <script>
+ var mymap = L.map('Karte').setView([0, 0]).setZoom(1);
+ 
+ L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png').addTo(mymap);
+</script>
 </body>
 </html>
