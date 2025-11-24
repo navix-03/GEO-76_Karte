@@ -19,9 +19,6 @@ OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{
 	maxZoom: 19,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
 }).addTo(mymap)
- osm_basemap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-	  attribution: '<a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  });
 
 var markInstitut = L.marker([48.5242, 9.05575]).addTo(mymap);
 markInstitut.bindPopup("<h1>What is this</h1><p>This is the Geographic Institute.</p>");
@@ -30,6 +27,9 @@ var popup = L.popup()
     .setLatLng([48.5243, 9.0558])
     .setContent("I am a standalone popup.")
     .openOn(mymap);
+	
+<h2>Erdbebenkarte</h2>
+<div id="Erdbeben" style="width: 800px; height: 600px; position: relative;></div>
 </script>
 </body>
 </html>
